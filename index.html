@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" class="bg-neutral font-inter">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./dist/css/adindas.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+  <title>Adindas | Home</title>
+</head>
+<body>
+<!-- wrapper -->
+<div class="wrapper flex relative">
+
+  <!-- sidebar -->
+  <aside class="w-[300px] bg-primary p-4 sticky top-0 opacity-100 h-screen md:flex flex flex-col transition-all duration-300" id="sidebar">
+    <div class="brand flex gap-2 border-b border-base-100 pb-5 items-center ">
+      <img src="./public/img/kodingkeun profle.png" alt="Kodingkeun Community">
+      <h1 class="text-2xl font-bold text-white leading-[18px] opacity-100 sidebar-text">Kodingkeun <div class="font-medium text-xl">Community</div> </h1>
+    </div>
+    <label class="bg btn-circle swap swap-rotate bg-base-200 w-8 h-8 absolute -right-4 top-16">
+      <input type="checkbox" id="btn-menu"/>
+      <svg class="swap-on fill-current text-[#CAC4F8] menu-open" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 512 512"><path d="M64,384H448V341.33H64Zm0-106.67H448V234.67H64ZM64,128v42.67H448V128Z"/></svg>
+      <svg class="swap-off fill-current text-[#CAC4F8] menu-close" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 512 512"><polygon points="400 145.49 366.51 112 256 222.51 145.49 112 112 145.49 222.51 256 112 366.51 145.49 400 256 289.49 366.51 400 400 366.51 289.49 256 400 145.49"/></svg>
+    </label>
+
+    <!-- list menu -->
+    <ul tabindex="0" class="rounded-box pt-5 flex flex-col gap-3">
+      <li>
+        <a href="" class="sidebar-content active">
+          <div class="w-[20px]">
+            <svg class="w-[20px]" viewBox="0 0 23 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0 0V20.125H23V17.25H2.875V0H0ZM14.375 0V14.375H20.125V0H14.375ZM5.75 5.75V14.375H11.5V5.75H5.75Z" fill="white"/>
+            </svg>              
+          </div>
+          <span class="text-white font-medium text-sm whitespace-nowrap opacity-100 sidebar-text">Dashboard</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="" class="sidebar-content">
+          <div class="w-[20px]">
+            <svg class="text-white w-[20px]" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
+              <path d="M96 128a128 128 0 1 1 256 0A128 128 0 1 1 96 128zM0 482.3C0 383.8 79.8 304 178.3 304h91.4C368.2 304 448 383.8 448 482.3c0 16.4-13.3 29.7-29.7 29.7H29.7C13.3 512 0 498.7 0 482.3zM609.3 512H471.4c5.4-9.4 8.6-20.3 8.6-32v-8c0-60.7-27.1-115.2-69.8-151.8c2.4-.1 4.7-.2 7.1-.2h61.4C567.8 320 640 392.2 640 481.3c0 17-13.8 30.7-30.7 30.7zM432 256c-31 0-59-12.6-79.3-32.9C372.4 196.5 384 163.6 384 128c0-26.8-6.6-52.1-18.3-74.3C384.3 40.1 407.2 32 432 32c61.9 0 112 50.1 112 112s-50.1 112-112 112z"/>
+            </svg>
+          </div>
+          <span class="text-white font-medium text-sm whitespace-nowrap opacity-100 sidebar-text">Member Kodingkeun</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="" class="sidebar-content">
+          <div class="w-[20px]">
+            <svg class="w-[20px]" viewBox="0 0 25 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M9.375 0V3.125H21.875V18.75H9.375V21.875H25V0H9.375ZM6.25 6.25L0 10.9375L6.25 15.625V12.5H18.75V9.375H6.25V6.25Z" fill="white"/>
+            </svg>              
+          </div>
+          <span class="text-white font-medium text-sm whitespace-nowrap opacity-100 sidebar-text">Logout</span>
+        </a>
+      </li>
+    </ul>
+    <!-- list menu END -->
+
+  </aside>
+  <!-- sidebar END -->
+  
+
+  <div class="content border mx-auto flex-1 bg-black">
+    <h1 class="text-center font-bold text-4xl">Hello world</h1>
+  </div>
+
+
+</div>
+<script src="./dist/js/adindas.js"></script>
+</body>
+</html>

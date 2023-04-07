@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .sidebar-content {
+    @apply w-full flex flex-row flex-nowrap gap-4 py-4 hover:bg-accent rounded-2xl transition-all duration-300 overflow-x-hidden px-6;
+  }
+  .sidebar-active {
+    @apply 
+  }
+}
+
+@layer utilities {
+  .active {
+    @apply bg-accent
+  }
+}

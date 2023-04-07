@@ -1,0 +1,20 @@
+{
+  "name": "adindas",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "npx tailwindcss -i ./dist/src/tailwind.css -o ./dist/css/adindas.css --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwind-scrollbar-hide": "^1.1.7",
+    "tailwindcss": "^3.3.1"
+  },
+  "dependencies": {
+    "daisyui": "^2.51.5"
+  }
+}
