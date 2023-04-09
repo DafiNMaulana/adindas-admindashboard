@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+.calendar-icon::-webkit-datetime-edit {
+  padding: 0;
+  display: none;
+}
+
+
 @layer components {
   .sidebar-content {
     @apply w-full flex flex-row flex-nowrap gap-4 py-4 hover:bg-accent rounded-2xl transition-all duration-300 overflow-x-hidden px-6;
@@ -25,6 +31,22 @@
 
   .sub-menu-item {
     @apply btn btn-circle bg-accent translate-y-[999px] opacity-0 transition-all duration-[.6s];
+  }
+  .scrollbar-ui::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+    background-color: #edf2f7;
+  }
+  
+  .scrollbar-ui::-webkit-scrollbar-thumb {
+    @apply bg-slate-400 rounded-xl;
+  }
+  
+  .scrollbar-ui::-webkit-scrollbar-track {
+    background-color: #edf2f7;
+  }
+  .notif-content {
+    @apply flex flex-row w-full gap-3 border-b border-slate-100 py-1 hover:bg-slate-100 transition-all rounded-lg px-1;
   }
 }
 

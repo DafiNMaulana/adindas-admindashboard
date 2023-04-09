@@ -1,13 +1,17 @@
 <!DOCTYPE html>
-<html lang="en" class="bg-neutral font-inter">
+<html lang="en" class="bg-neutral font-inter" data-theme="adindasUI">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- CSS -->
   <link rel="stylesheet" href="./dist/css/adindas.css">
+  <!-- Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+  <!-- icon fontawesome -->
+  <link rel="stylesheet" href="./node_modules/@fortawesome/fontawesome-free/css/all.min.css">
   <title>Adindas | Home</title>
 </head>
 <body>
@@ -15,7 +19,7 @@
 <div class="wrapper flex relative">
 
   <!-- sidebar -->
-  <aside class="w-[300px] bg-primary p-4 sticky top-0 opacity-100 h-screen hidden md:flex flex-col transition-all duration-300" id="sidebar">
+  <aside class="w-[250px] bg-primary p-4 sticky top-0 opacity-100 h-screen hidden md:flex flex-col transition-all duration-300 z-40 relative drop-shadow-[6px_4px_11px_rgba(0,0,0,0.3)]" id="sidebar">
     <div class="brand flex gap-2 border-b border-base-100 pb-5 items-center ">
       <img src="./public/img/kodingkeun profle.png" alt="Kodingkeun Community">
       <h1 class="text-2xl font-bold text-white leading-[18px] opacity-100 sidebar-text">Kodingkeun <div class="font-medium text-xl">Community</div> </h1>
@@ -29,11 +33,9 @@
     <!-- list menu -->
     <ul tabindex="0" class="rounded-box pt-5 flex flex-col gap-3">
       <li>
-        <a href="" class="sidebar-content active tooltip tooltip-open tooltip-right" data-tip="hello">
+        <a href="" class="sidebar-content active">
           <div class="w-[20px]">
-            <svg class="w-[20px]" viewBox="0 0 23 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M0 0V20.125H23V17.25H2.875V0H0ZM14.375 0V14.375H20.125V0H14.375ZM5.75 5.75V14.375H11.5V5.75H5.75Z" fill="white"/>
-            </svg>              
+            <i class="fa-solid fa-chart-column text-[20px] text-white"></i>
           </div>
           <span class="text-white font-medium text-sm whitespace-nowrap opacity-100 sidebar-text">Dashboard</span>
         </a>
@@ -42,9 +44,7 @@
       <li>
         <a href="" class="sidebar-content">
           <div class="w-[20px]">
-            <svg class="text-white w-[20px]" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
-              <path d="M96 128a128 128 0 1 1 256 0A128 128 0 1 1 96 128zM0 482.3C0 383.8 79.8 304 178.3 304h91.4C368.2 304 448 383.8 448 482.3c0 16.4-13.3 29.7-29.7 29.7H29.7C13.3 512 0 498.7 0 482.3zM609.3 512H471.4c5.4-9.4 8.6-20.3 8.6-32v-8c0-60.7-27.1-115.2-69.8-151.8c2.4-.1 4.7-.2 7.1-.2h61.4C567.8 320 640 392.2 640 481.3c0 17-13.8 30.7-30.7 30.7zM432 256c-31 0-59-12.6-79.3-32.9C372.4 196.5 384 163.6 384 128c0-26.8-6.6-52.1-18.3-74.3C384.3 40.1 407.2 32 432 32c61.9 0 112 50.1 112 112s-50.1 112-112 112z"/>
-            </svg>
+            <i class="fa-solid fa-user-group text-[20px] text-white"></i>
           </div>
           <span class="text-white font-medium text-sm whitespace-nowrap opacity-100 sidebar-text">Member Kodingkeun</span>
         </a>
@@ -53,9 +53,7 @@
       <li>
         <a href="" class="sidebar-content">
           <div class="w-[20px]">
-            <svg class="w-[20px]" viewBox="0 0 25 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M9.375 0V3.125H21.875V18.75H9.375V21.875H25V0H9.375ZM6.25 6.25L0 10.9375L6.25 15.625V12.5H18.75V9.375H6.25V6.25Z" fill="white"/>
-            </svg>              
+            <i class="fa-solid fa-arrow-right-from-bracket text-[20px] text-white"></i>              
           </div>
           <span class="text-white font-medium text-sm whitespace-nowrap opacity-100 sidebar-text">Logout</span>
         </a>
@@ -67,26 +65,20 @@
   <!-- sidebar END -->
 
   <!-- navbar -->
-  <div class="bottom-nav group">
+  <div class="bottom-nav">
     <a class="bnav-item bnav-active">
       <div class="w-[25px]">
-        <svg class="w-[25px]" viewBox="0 0 23 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M0 0V20.125H23V17.25H2.875V0H0ZM14.375 0V14.375H20.125V0H14.375ZM5.75 5.75V14.375H11.5V5.75H5.75Z" fill="white"/>
-        </svg>              
+        <i class="fa-solid fa-chart-column text-[25px] text-white"></i>            
       </div>
     </a>
     <a class="bnav-item">
       <div class="w-[25px]">
-        <svg class="text-white w-[25px]" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
-          <path d="M96 128a128 128 0 1 1 256 0A128 128 0 1 1 96 128zM0 482.3C0 383.8 79.8 304 178.3 304h91.4C368.2 304 448 383.8 448 482.3c0 16.4-13.3 29.7-29.7 29.7H29.7C13.3 512 0 498.7 0 482.3zM609.3 512H471.4c5.4-9.4 8.6-20.3 8.6-32v-8c0-60.7-27.1-115.2-69.8-151.8c2.4-.1 4.7-.2 7.1-.2h61.4C567.8 320 640 392.2 640 481.3c0 17-13.8 30.7-30.7 30.7zM432 256c-31 0-59-12.6-79.3-32.9C372.4 196.5 384 163.6 384 128c0-26.8-6.6-52.1-18.3-74.3C384.3 40.1 407.2 32 432 32c61.9 0 112 50.1 112 112s-50.1 112-112 112z"/>
-        </svg>
+        <i class="fa-solid fa-user-group text-[25px] text-white"></i>
       </div>
     </a>
     <a class="bnav-item">
       <div class="w-[20px]">
-        <svg class="w-[20px]" viewBox="0 0 25 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M9.375 0V3.125H21.875V18.75H9.375V21.875H25V0H9.375ZM6.25 6.25L0 10.9375L6.25 15.625V12.5H18.75V9.375H6.25V6.25Z" fill="white"/>
-        </svg>              
+        <i class="fa-solid fa-arrow-right-from-bracket text-[25px] text-white"></i>             
       </div>
     </a>
     <label class="bg btn-circle swap swap-rotate duration-[.5s]">
@@ -97,30 +89,17 @@
     <div class="sub-menu">
       <a class="sub-menu-item">
         <div class="w-[25px]">
-          <svg class="w-[25px]" viewBox="0 0 23 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M0 0V20.125H23V17.25H2.875V0H0ZM14.375 0V14.375H20.125V0H14.375ZM5.75 5.75V14.375H11.5V5.75H5.75Z" fill="white"/>
-          </svg>              
+        <i class="fa-solid fa-chart-column text-[17px] text-white"></i>  
         </div>
       </a>
       <a class="delay-150 sub-menu-item">
         <div class="w-[25px]">
-          <svg class="w-[25px]" viewBox="0 0 23 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M0 0V20.125H23V17.25H2.875V0H0ZM14.375 0V14.375H20.125V0H14.375ZM5.75 5.75V14.375H11.5V5.75H5.75Z" fill="white"/>
-          </svg>              
+        <i class="fa-solid fa-user-group text-[17px] text-white"></i>
         </div>
       </a>
       <a class="delay-200 sub-menu-item">
         <div class="w-[25px]">
-          <svg class="text-white w-[25px]" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
-            <path d="M96 128a128 128 0 1 1 256 0A128 128 0 1 1 96 128zM0 482.3C0 383.8 79.8 304 178.3 304h91.4C368.2 304 448 383.8 448 482.3c0 16.4-13.3 29.7-29.7 29.7H29.7C13.3 512 0 498.7 0 482.3zM609.3 512H471.4c5.4-9.4 8.6-20.3 8.6-32v-8c0-60.7-27.1-115.2-69.8-151.8c2.4-.1 4.7-.2 7.1-.2h61.4C567.8 320 640 392.2 640 481.3c0 17-13.8 30.7-30.7 30.7zM432 256c-31 0-59-12.6-79.3-32.9C372.4 196.5 384 163.6 384 128c0-26.8-6.6-52.1-18.3-74.3C384.3 40.1 407.2 32 432 32c61.9 0 112 50.1 112 112s-50.1 112-112 112z"/>
-          </svg>
-        </div>
-      </a>
-      <a class="delay-300 sub-menu-item">
-        <div class="w-[20px]">
-          <svg class="w-[20px]" viewBox="0 0 25 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M9.375 0V3.125H21.875V18.75H9.375V21.875H25V0H9.375ZM6.25 6.25L0 10.9375L6.25 15.625V12.5H18.75V9.375H6.25V6.25Z" fill="white"/>
-          </svg>              
+        <i class="fa-solid fa-arrow-right-from-bracket text-[17px] text-white"></i>   
         </div>
       </a>
     </div>
@@ -129,12 +108,432 @@
 
   <!-- content here -->
   <div class="mx-auto flex-1 bg-neutral p-0">
-    <div class="w-full bg-[url('/public/img/bg-hero.png')] h-52 bg-cover bg-center"></div>
+
+    <!-- header -->
+    <div class="w-full bg-[url('/public/img/bg-hero.png')] h-60 bg-cover bg-center relative pb-[350px]">
+
+      <!-- search bar -->
+      <div class="w-full flex justify-between py-5 px-10">
+        <form action="#">
+          <div class="form-control flex-row items-center">
+            <button type="button" class="btn bg-transparent hover:bg-transparent border-0 mr-[-47px] relative z-40">
+              <i class="fa-solid fa-magnifying-glass text-white text-[18px]"></i>
+            </button>
+              <input type="text" placeholder="Cari sesuatu disini .." class="input bg-base-300/20 text-white border-base-300 rounded-full pl-10 h-9 w-[350px]" />
+          </div>
+        </form>
+
+        <!-- tool bar -->
+        <div class="flex flex-row gap-5">
+
+          <!-- notification -->
+          <div class="items-center flex relative relative">
+            <span class="bg-base-200 w-3 h-3 rounded-full animate-pulse absolute -right-1 top-2.5"></span> 
+
+              <button type="button" class="cursor-pointer" id="notif-btn">
+                <i class="fa-solid fa-bell w-[25px] text-white"></i>
+              </button>
+              
+              <div class="flex flex-col gap-3 w-80 h-96 bg-white drop-shadow-lg rounded-lg absolute right-[0] top-[50px] flex px-5 py-3  invisible opacity-0 transition-all duration-300 notif-parent z-[999]">
+                <div class="flex justify-between">
+                  <p class="text-slate-600 font-medium">Notification</p>
+                  <button class="btn bg-transparent h-1 hover:bg-transparent text-base-200 border-0 -mt-3">
+                    <i class="fa-solid fa-check-double text-xl text-base-200"></i>
+                  </button>
+                </div>
+
+                <!-- notif content -->
+                <div class="w-full h-full overflow-x-hidden scrollbar-ui">
+                  <a href="" class="notif-content">
+                    <div class="rounded-full h-9 w-10 flex p-2.5 bg-red-500">
+                      <i class="fa-solid fa-triangle-exclamation text-white"></i>
+                    </div>
+
+                    <div class="w-full flex flex-col gap-2">
+                      <p class="text-black text-sm font-medium">
+                        There's an error
+                      </p>
+
+                      <p class="font-medium uppercase text-[10px]">
+                        2 Minutes ago
+                      </p>
+                    </div>
+                  </a>
+                  <a href="" class="notif-content">
+                    <div class="rounded-full h-9 w-10 flex p-2.5 bg-red-500">
+                      <i class="fa-solid fa-triangle-exclamation text-white"></i>
+                    </div>
+
+                    <div class="w-full flex flex-col gap-2">
+                      <p class="text-black text-sm font-medium">
+                        There's an error
+                      </p>
+
+                      <p class="font-medium uppercase text-[10px]">
+                        2 Minutes ago
+                      </p>
+                    </div>
+                  </a>
+                  <a href="" class="notif-content">
+                    <div class="rounded-full h-9 w-10 flex p-2.5 bg-red-500">
+                      <i class="fa-solid fa-triangle-exclamation text-white"></i>
+                    </div>
+
+                    <div class="w-full flex flex-col gap-2">
+                      <p class="text-black text-sm font-medium">
+                        There's an error
+                      </p>
+
+                      <p class="font-medium uppercase text-[10px]">
+                        2 Minutes ago
+                      </p>
+                    </div>
+                  </a>
+                  <a href="" class="notif-content">
+                    <div class="rounded-full h-9 w-10 flex p-2.5 bg-red-500">
+                      <i class="fa-solid fa-triangle-exclamation text-white"></i>
+                    </div>
+
+                    <div class="w-full flex flex-col gap-2">
+                      <p class="text-black text-sm font-medium">
+                        There's an error
+                      </p>
+
+                      <p class="font-medium uppercase text-[10px]">
+                        2 Minutes ago
+                      </p>
+                    </div>
+                  </a>
+                  <a href="" class="notif-content">
+                    <div class="rounded-full h-9 w-10 flex p-2.5 bg-red-500">
+                      <i class="fa-solid fa-triangle-exclamation text-white"></i>
+                    </div>
+
+                    <div class="w-full flex flex-col gap-2">
+                      <p class="text-black text-sm font-medium">
+                        There's an error
+                      </p>
+
+                      <p class="font-medium uppercase text-[10px]">
+                        2 Minutes ago
+                      </p>
+                    </div>
+                  </a>
+                  <a href="" class="notif-content">
+                    <div class="rounded-full h-9 w-10 flex p-2.5 bg-red-500">
+                      <i class="fa-solid fa-triangle-exclamation text-white"></i>
+                    </div>
+
+                    <div class="w-full flex flex-col gap-2">
+                      <p class="text-black text-sm font-medium">
+                        There's an error
+                      </p>
+
+                      <p class="font-medium uppercase text-[10px]">
+                        2 Minutes ago
+                      </p>
+                    </div>
+                  </a>
+                  <a href="" class="notif-content">
+                    <div class="rounded-full h-9 w-10 flex p-2.5 bg-red-500">
+                      <i class="fa-solid fa-triangle-exclamation text-white"></i>
+                    </div>
+
+                    <div class="w-full flex flex-col gap-2">
+                      <p class="text-black text-sm font-medium">
+                        There's an error
+                      </p>
+
+                      <p class="font-medium uppercase text-[10px]">
+                        2 Minutes ago
+                      </p>
+                    </div>
+                  </a>
+                </div>
+
+                <a href="" class="flex justify-center">
+                  <p class="text-base-200 font-medium">View All</p>
+                  <button class="btn bg-transparent h-1 hover:bg-transparent text-base-200 border-0 -mt-3">
+                    <i class="fa-solid fa-magnifying-glass w-3 h-3 text-base-200"></i>
+                  </button>
+                </a>
+              </div>
+          </div>
+
+          <!-- calendar -->
+          <div class="flex items-center">
+            <input type="date" id="date-picker" class="calendar-icon bg-transparent text-white border-0 ring-0 -mr-[18px] relative z-3 opacity-0">
+            <i class="fa-solid fa-calendar-days text-white"></i>
+          </div>
+
+          <!-- prfile -->
+          <div class="flex justify-start flex-row items-center gap-2">
+            <div class="flex -space-x-2 overflow-hidden h-9 w-9 drop-shadow-lg cursor-pointer" id="profile">
+                <img class="inline-block object-fit rounded-full" src="./public/img/avatar-profile.jpg" alt="Yae Miko"/>
+            </div>
+            <span class="font-medium text-white">Zulhan</span>
+            <ul tabindex="0" class="dropdown-content menu p-2 shadow bg-base-100 rounded-box text-white rounded-lg w-52 absolute transition-all duration-300 opacity-0 right-5 top-0 invisible flex flex-col justify-start z-[999]" id="profile-menu">
+              <li>
+                <a> 
+                  <div class="rounded-full p-2">
+                    <i class="fa-solid fa-user text-white w-3"></i>
+                  </div>
+                  Edit Profile
+                </a>
+              </li>
+              <li>
+                <a> 
+                  <div class="rounded-full p-2">
+                    <i class="fa-solid fa-gear text-white w-3"></i>                  
+                  </div>
+                  Pengaturan
+                </a>
+              </li>
+              <li>
+                <a> 
+                  <div class="rounded-full p-2">
+                    <i class="fa-solid fa-arrow-right-from-bracket w-3 text-white"></i>  
+                  </div>
+                  Logout
+                </a>
+              </li>
+            </ul>
+          </div> 
+
+        </div>
+      </div>
+
+      <!-- breadcrumb -->
+      <div class="w-full flex justify-between px-10">
+        <div class="text-sm breadcrumbs">
+          <ul>
+            <li class="text-[#B6B5B5]">
+              <a>
+                Dashboard
+              </a>
+            </li> 
+            <li class="text-white">
+              Overview
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- greeting text, button add & update -->
+      <div class="w-full grid grid-cols-2 px-10">
+        <div class="flex flex-col gap-2 mt-2 col-span-1">
+          <h1 class="text-white font-bold text-2xl">Welcome back Zulhan !</h1>
+          <p class="text-white text-md normal-case">Semakin kau tau, semakin kamu menyadari bahwa tidak terlalu banyak yang kau ketahui</p>
+        </div>
+        <div class="flex flex-row gap-4 mt-2 col-span-1 items-end justify-end">
+          <a href="#" class="btn btn-sm bg-base-400/40 border-base-400 hover:bg-base-450 hover:border-base-450 text-white normal-case flex gap-2">
+            <i class="fa-solid fa-pen text-white w-3"></i>
+            <span>
+              Update anggota
+            </span>
+          </a>
+          <a href="#" class="btn btn-sm bg-base-400 border-base-400 hover:bg-base-450 hover:border-base-450 text-white normal-case flex gap-2">
+            <i class="fa-solid fa-plus text-white w-3"></i>
+            <span>
+              Tambah anggota
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <!-- header end -->
+
+    <!-- statistic card -->
+    <div class="flex gap-3 px-10 place-items-center">
+      
+      <div class="flex flex-col justify-center bg-success-card col-span-1 p-4 rounded-xl relative h-[200px] flex-1 translate-y-[-100px]">
+        <span class="text-white font-medium absolute top-2 text-md">Jumlah anggota</span>
+        <div class="flex justify-between items-center">
+          <h1 class="text-white font-bold text-[60px]">456</h1>
+            <i class="fa-solid fa-user-group text-[#297257] text-[59px]""></i>
+        </div>
+        <div class="flex flex-col justify-between absolute left-0 right-0 bottom-0 rounded-b-xl bg-[#297257]">
+          <a href="#" class=" text-white normal-case flex items-center px-4 py-2 flex gap-2">
+            <i class="fa-solid fa-plus text-white w-3"></i>
+            <span>
+              Tambah anggota baru
+            </span>
+          </a>
+        </div>
+      </div>
+
+      <div class="flex flex-col justify-center bg-info-card col-span-1 p-4 rounded-xl relative h-[200px] flex-1 translate-y-[-100px]">
+        <span class="text-white font-medium absolute top-2 text-md">Jumlah admin</span>
+        <div class="flex justify-between items-center">
+          <h1 class="text-white font-bold text-[60px]">456</h1>
+            <i class="fa-solid fa-user text-[#1E7671] text-[59px]"></i>
+        </div>
+        <div class="flex flex-col justify-between absolute left-0 right-0 bottom-0 rounded-b-xl bg-[#1E7671]">
+          <a href="#" class=" text-white normal-case flex items-center px-4 py-2 flex gap-2">
+            <i class="fa-solid fa-plus text-white w-3"></i>
+            <span>
+              Tambah admin baru
+            </span>
+          </a>
+        </div>
+      </div>
+
+      <div class="flex flex-col justify-center bg-danger-card col-span-1 p-4 rounded-xl relative h-[200px] flex-1 translate-y-[-100px]">
+        <span class="text-white font-medium absolute top-2 text-md">Jumlah super admin</span>
+        <div class="flex justify-between items-center">
+          <h1 class="text-white font-bold text-[60px]">4</h1>
+            <i class="fa-solid fa-user-gear text-[#933232] text-[59px]"></i>
+        </div>
+        <div class="flex flex-col justify-between absolute left-0 right-0 bottom-0 rounded-b-xl bg-[#933232]">
+          <a href="#" class=" text-white normal-case flex items-center px-4 py-2 flex gap-2">
+            <i class="fa-solid fa-plus text-white w-3"></i>
+            <span>
+              Tambah admin baru
+            </span>
+          </a>
+        </div>
+      </div>
+      
+    </div>
+    <!-- statistic card end -->
+
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div class="px-10">
+      <div class="relative flex flex-col min-w-0 break-words w-full mb-6 drop-shadow-xl rounded bg-white">
+        <div class="rounded-t mb-0 px-4 py-3">
+          <div class="flex flex-wrap items-center text-[#2E3138]">
+            <div class="relative w-full max-w-full flex-grow flex-1">
+              <h6 class="uppercase mb-1 text-xs font-semibold">
+                Overview
+              </h6>
+              <h2 class="text-xl font-semibold">
+                Statistik jumlah anggota
+              </h2>
+            </div>
+          </div>
+        </div>
+        <div class="flex-auto">
+          <!-- Chart -->
+          <div class="relative h-[350px] p-4 rounded-b-md">
+            <canvas id="line-chart"></canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
   </div>
-  <!-- content here END -->
-
-
+  <!-- content end -->
 </div>
+<script src="./node_modules/chart.js/dist/chart.umd.js"></script>
+<script type="text/javascript">
+  (function () {
+    /* Chart initialisations */
+    /* Line Chart */
+    var config = {
+      type: "line",
+      data: {
+        labels: [
+          "January",
+          "February",
+          "March",
+          "April",
+          "May",
+          "June",
+          "July",
+        ],
+        datasets: [
+          {
+            label: new Date().getFullYear(),
+            backgroundColor: "#4c51bf",
+            borderColor: "#4c51bf",
+            data: [65, 78, 66, 44, 56, 67, 75],
+            fill: false,
+          },
+          {
+            label: new Date().getFullYear() - 1,
+            fill: false,
+            backgroundColor: "#ed64a6",
+            borderColor: "#ed64a6",
+            data: [40, 68, 86, 74, 56, 60, 87],
+          },
+        ],
+      },
+      options: {
+        maintainAspectRatio: false,
+        responsive: true,
+        title: {
+          display: false,
+          text: "Sales Charts",
+          fontColor: "#2E3138",
+        },
+        legend: {
+          labels: {
+            fontColor: "#2E3138",
+          },
+          align: "end",
+          position: "bottom",
+        },
+        tooltips: {
+          mode: "index",
+          intersect: false,
+        },
+        hover: {
+          mode: "nearest",
+          intersect: true,
+        },
+        scales: {
+          xAxes: [
+            {
+              ticks: {
+                fontColor: "#5C6370",
+              },
+              display: true,
+              scaleLabel: {
+                display: false,
+                labelString: "Month",
+                fontColor: "white",
+              },
+              gridLines: {
+                display: false,
+                borderDash: [2],
+                borderDashOffset: [2],
+                color: "rgba(33, 37, 41, 0.3)",
+                zeroLineColor: "rgba(0, 0, 0, 0)",
+                zeroLineBorderDash: [2],
+                zeroLineBorderDashOffset: [2],
+              },
+            },
+          ],
+          yAxes: [
+            {
+              ticks: {
+                fontColor: "#5C6370",
+              },
+              display: true,
+              scaleLabel: {
+                display: false,
+                labelString: "Value",
+                fontColor: "white",
+              },
+              gridLines: {
+                borderDash: [3],
+                borderDashOffset: [3],
+                drawBorder: false,
+                color: "#DEE3ED",
+                zeroLineColor: "rgba(33, 37, 41, 0)",
+                zeroLineBorderDash: [2],
+                zeroLineBorderDashOffset: [2],
+              },
+            },
+          ],
+        },
+      },
+    };
+    var ctx = document.getElementById("line-chart").getContext("2d");
+    window.myLine = new Chart(ctx, config);
+  })();
+</script>
 <script src="./dist/js/adindas.js"></script>
 </body>
 </html>
