@@ -2,27 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
-.calendar-icon::-webkit-datetime-edit {
-  padding: 0;
-  display: none;
-}
-
-
 @layer components {
   .sidebar-content {
     @apply w-full flex flex-row flex-nowrap gap-4 py-4 hover:bg-accent rounded-2xl transition-all duration-300 overflow-x-hidden px-6;
   }
 
   .bottom-nav {
-    @apply flex md:hidden fixed bottom-0 right-0 left-0 bg-primary backdrop-blur-lg h-20 px-5 py-2 items-center gap-5 justify-between shadow-xl;
+    @apply flex md:hidden fixed bottom-0 right-0 left-0 bg-primary backdrop-blur-lg h-20 px-5 py-2 items-center gap-5 justify-between shadow-xl z-[999];
   }
 
   .bnav-item {
-    @apply btn btn-circle border-0 px-3 bg-primary py-3 flex justify-center items-center gap-2 w-auto;
+    @apply btn border-0 px-4 pb-1 bg-primary flex w-auto hover:bg-accent;
   }
 
   .bnav-active {
-    @apply bg-base-200 p-3;
+    @apply bg-accent;
   }
 
   .sub-menu {

@@ -9,7 +9,6 @@ const profile = document.getElementById('profile');
 const profileMenu = document.getElementById('profile-menu');
 const notifParent = document.querySelector('.notif-parent');
 const notifBtn = document.getElementById('notif-btn');
-
 sidebarText.forEach(st => st.classList.add('transition-all', 'duration-300'));
 
 profile.addEventListener('click', () => {
@@ -28,11 +27,14 @@ notifBtn.addEventListener('click', () => {
 })
 
 const toggleSidebar = () => {
+  if(window.matchMedia('(max-width: 992px)')) {
+    
+  }
   sidebar.classList.toggle('w-[250px]');
   sidebar.classList.toggle('w-[100px]');
   sidebarText.forEach(st => {
-    st.classList.toggle('opacity-0');
-    st.classList.toggle('opacity-100');
+    st.classList.toggle('scale-0');
+    st.classList.toggle('scale-100');
   });
 }
 
