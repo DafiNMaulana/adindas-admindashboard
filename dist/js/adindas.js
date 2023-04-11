@@ -8,7 +8,38 @@ const notifParent = document.querySelector('.notif-parent');
 const notifBtn = document.getElementById('notif-btn');
 const mobileMenu = document.getElementById('mobile-menu');
 
-mobileMenu.addEventListener('change', () => {
+let modalBtns = document.querySelectorAll('.modal-btn');
+
+for (let modalBtn of modalBtns) {
+  modalBtn.onclick = () => {
+    let targetModalId = modalBtn.dataset.target;
+    let targetModal = document.getElementById(targetModalId);
+    
+    if (targetModal) {
+      const modalBox = targetModal.querySelector('.modalBox');
+      // toggle class untuk menampilkan atau menyembunyikan modal
+      targetModal.classList.toggle('invisible');
+      targetModal.classList.toggle('visible');
+      targetModal.classList.toggle('opacity-100');
+      modalBox.classList.toggle('-translate-y-28');
+      
+      // menambahkan event listener untuk tombol cancel
+      let cancelBtn = targetModal.querySelector('.btn-cancel');
+      if (cancelBtn) {
+        cancelBtn.onclick = () => {
+          targetModal.classList.toggle('invisible');
+          targetModal.classList.toggle('visible');
+          targetModal.classList.toggle('opacity-100');
+          modalBox.classList.toggle('-translate-y-28');
+        };
+      }
+    }
+  };
+}
+
+
+
+mobileMenu.onchange = () => {
   sidebar.classList.toggle('w-0');
   sidebar.classList.toggle('w-[300px]');
   sidebar.classList.toggle('p-0');
@@ -24,9 +55,9 @@ mobileMenu.addEventListener('change', () => {
   } else if (btnMenu.checked = false) {
     btnMenu.checked = false
   }
-})
+}
 
-btnMenu.addEventListener('change', () => {
+btnMenu.onchange = () => {
   sidebar.classList.toggle('lg:w-[300px]');
   sidebar.classList.toggle('lg:w-[100px]');
   for(i of sidebarText) {
@@ -44,19 +75,19 @@ btnMenu.addEventListener('change', () => {
       i.classList.toggle('scale-0');
     }
   }
-});
+};
 
-profile.addEventListener('click', () => {
+profile.onclick = () => {
   profileMenu.classList.toggle('invisible');
   profileMenu.classList.toggle('visible');
   profileMenu.classList.toggle('top-[70px]');
   profileMenu.classList.toggle('opacity-0');
   profileMenu.classList.toggle('opacity-100');
-})
+}
 
-notifBtn.addEventListener('click', () => {
+notifBtn.onclick = () => {
   notifParent.classList.toggle('invisible');
   notifParent.classList.toggle('visible');
   notifParent.classList.toggle('opacity-0');
   notifParent.classList.toggle('opacity-100');
-})
+}

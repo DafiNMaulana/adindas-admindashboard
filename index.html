@@ -276,19 +276,19 @@
           <h1 class="text-white font-bold text-2xl">Welcome back Zulhan !</h1>
           <p class="text-white text-md normal-case">Semakin kau tau, semakin kamu menyadari bahwa tidak terlalu banyak yang kau ketahui</p>
         </div>
-        <div class="md:flex flex-row gap-4 mt-2 col-span-1 items-end justify-end hidden">
+        <div class="hidden lg:flex flex-row gap-4 mt-2 col-span-1 items-end justify-end">
           <a href="#" class="btn btn-sm bg-base-400/40 rounded-md border-base-400 hover:bg-base-450 hover:border-base-450 text-white normal-case flex gap-2">
             <i class="fa-solid fa-pen text-white w-3"></i>
             <span>
               Update anggota
             </span>
           </a>
-          <a href="#my-modal-2" class="btn btn-sm rounded-md bg-base-400 border-base-400 hover:bg-base-450 hover:border-base-450 text-white normal-case flex gap-2">
+          <button type="button" class="modal-btn btn bg-base-400 btn-sm rounded-md border-base-400 hover:bg-base-450 hover:border-base-450 text-white normal-case flex gap-2" data-target="my-modal">
             <i class="fa-solid fa-plus text-white w-3"></i>
             <span>
               Tambah anggota
             </span>
-          </a>
+          </button>
         </div>
       </div>
     </div>
@@ -297,7 +297,7 @@
     <!-- statistic card -->
     <div class="grid grid-cols-4 lg:grid-cols-3 gap-3 px-3 md:px-10 place-items-center translate-y-[-80px] relative z-10">
       
-      <div class="flex flex-col justify-center bg-success-card col-span-2 md:col-span-2 lg:col-span-1 p-4 rounded-md md:rounded-lg relative h-[150px] md:h-[200px] w-full">
+      <div class="curedUI bg-success">
         <span class="text-white font-medium absolute top-2 text-md">Anggota</span>
         <div class="flex justify-between items-center">
           <h1 class="text-white font-bold text-3xl lg:text-[60px]">456</h1>
@@ -315,7 +315,7 @@
         </div>
       </div>
 
-      <div class="flex flex-col justify-center bg-info-card col-span-2 md:col-span-2 lg:col-span-1 p-4 rounded-md md:rounded-lg relative h-[150px] md:h-[200px] w-full">
+      <div class="curedUI bg-info">
         <span class="text-white font-medium absolute top-2 text-md">Admin</span>
         <div class="flex justify-between items-center">
           <h1 class="text-white font-bold text-3xl lg:text-[60px]">456</h1>
@@ -333,7 +333,7 @@
         </div>
       </div>
 
-      <div class="flex flex-col justify-center bg-danger-card col-span-2 md:col-span-2 lg:col-span-1 p-4 rounded-md md:rounded-lg relative h-[150px] md:h-[200px] w-full">
+      <div class="curedUI bg-danger">
         <span class="text-white font-medium absolute top-2 text-md">Super admin</span>
         <div class="flex justify-between items-center">
           <h1 class="text-white font-bold text-3xl lg:text-[60px]">4</h1>
@@ -353,21 +353,66 @@
     </div>
     <!-- statistic card end -->
 
-    <div class="w-full h-[350px] px-3 md:px-10 pb-10">
-      <!-- <canvas id="line-chart"></canvas> -->
+    <div class="w-full lg:px-10 px-3">
+      <div class="relative flex flex-col min-w-0 mb-6 shadow-lg rounded  bg-white drop-shadow-lg">
+        <div class="rounded-t mb-0 px-4 py-3">
+          <div class="flex flex-wrap items-center">
+            <div class="relative w-full max-w-full flex-grow flex-1">
+              <h6
+                class="uppercase text-slate-500 mb-1 text-xs font-semibold"
+              >
+                Overview
+              </h6>
+              <h2 class="text-black text-xl font-semibold">
+                Sales value
+              </h2>
+            </div>
+          </div>
+        </div>
+        <div class="flex-auto px-3">
+          <!-- Chart -->
+          <div class="relative h-[350px]">
+            <canvas id="line-chart"></canvas>
+          </div>
+        </div>
+      </div>
     </div>
-    </div>
-  </div>
   
-<div class="fixed bg-black/50 backdrop-blur-sm top-0 right-0 left-0 bottom-0 flex justify-center z-[99]" id="my-modal-2">
-  <div class="modal-box bg-white drop-shadow-lg text-black flex-none shrink-0">
-    <h3 class="font-bold text-lg">Congratulations random Internet user!</h3>
-    <p class="py-4">You've been selected for a chance to get one year of subscription to use Wikipedia for free!</p>
-    <div class="modal-action">
-      <a href="#" class="btn">Yay!</a>
+  </div>
+  <div class="modalUI invisible opacity-0" id="my-modal">
+    <div class="modalBox p-6 h-auto bg-white drop-shadow-lg text-black rounded-lg mx-auto w-[90vw] lg:w-1/2 rounded-sm mt-10 -translate-y-28 duration-300">
+      <h1 class="text-md text-black font-bold">
+        Tambah anggota group baru
+      </h1>
+      <p class="text-sm italic text-slate-500 font-medium">
+        Isi data yang dibutuh kan terlebih dahulu
+      </p>
+      <form action="#" class="grid grid-col-1 grid-row-5 lg:grid-col-2 lg:grid-row-3 gap-4">
+        <div class="form-control col-span-1 row-start-1 w-full">
+          <label class="label">
+            <span class="font-medium text-slate-500">Nama Lengkap</span>
+          </label>
+          <input type="text" placeholder="Type here" class="input bg-transparent border-slate-400 rounded-md w-full" />
+        </div>
+        <div class="form-control col-span-1 row-start-2 lg:row-start-1 w-full">
+          <label class="label">
+            <span class="font-medium text-slate-500">Nomor HP</span>
+          </label>
+          <input type="text" placeholder="Type here" class="input bg-transparent border-slate-400 rounded-md w-full" />
+        </div>
+        <div class="form-control col-span-1 lg:col-span-2 row-start-3 lg:row-start-2">
+          <label class="label">
+            <span class="font-medium text-slate-500">Alamat lengkap</span>
+          </label>
+          <textarea type="text" placeholder="Type here" class="input bg-transparent border-slate-400 rounded-md w-full h-40"></textarea>
+        </div>
+        <div class="form-control col-span-1 row-start-4 lg:row-start-3 flex gap-2 flex-row">
+          <button class="btn btn-white border-slate-400 rounded-sm flex-1 btn-cancel">cancel</button>
+          <button class="btn btn-secondary rounded-sm flex-1">Submit</buttn>
+        </div>
+      </form>
     </div>
   </div>
-</div>
 <script src="./node_modules/chart.js/dist/chart.umd.js" charset="utf-8"></script>
 <script type="text/javascript">
   (function () {
