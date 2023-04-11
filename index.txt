@@ -1,0 +1,480 @@
+
+<div class="w-screen flex">
+
+  <!-- sidebar -->
+  <aside class="w-[250px] bg-primary p-4 sticky top-0 opacity-100 h-screen hidden md:flex flex-col transition-all duration-300 z-40 drop-shadow-[6px_4px_11px_rgba(0,0,0,0.3)]" id="sidebar">
+    <div class="brand flex gap-2 border-b border-base-100 pb-5 items-center ">
+      <img src="./public/img/kodingkeun profle.png" alt="Kodingkeun Community">
+      <h1 class="text-2xl font-bold text-white leading-[18px] scale-100 sidebar-text">Kodingkeun <div class="font-medium text-xl">Community</div> </h1>
+    </div>
+    <label class="bg btn-circle swap swap-rotate bg-base-200 w-8 h-8 absolute -right-4 top-16">
+      <input type="checkbox" id="btn-menu"/>
+      <svg class="swap-on fill-current text-[#CAC4F8] menu-open" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 512 512"><path d="M64,384H448V341.33H64Zm0-106.67H448V234.67H64ZM64,128v42.67H448V128Z"/></svg>
+      <svg class="swap-off fill-current text-[#CAC4F8] menu-close" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 512 512"><polygon points="400 145.49 366.51 112 256 222.51 145.49 112 112 145.49 222.51 256 112 366.51 145.49 400 256 289.49 366.51 400 400 366.51 289.49 256 400 145.49"/></svg>
+    </label>
+
+    <!-- list menu -->
+    <ul tabindex="0" class="rounded-box pt-5 flex flex-col gap-3">
+      <li>
+        <a href="./index.html" class="sidebar-content active">
+          <div class="w-[20px]">
+            <i class="fa-solid fa-chart-column text-[20px] text-white"></i>
+          </div>
+          <span class="text-white font-medium text-sm whitespace-nowrap scale-100 sidebar-text">Dashboard</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="" class="sidebar-content">
+          <div class="w-[20px]">
+            <i class="fa-solid fa-user-group text-[20px] text-white"></i>
+          </div>
+          <span class="text-white font-medium text-sm whitespace-nowrap scale-100 sidebar-text">Member Kodingkeun</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="" class="sidebar-content">
+          <div class="w-[20px]">
+            <i class="fa-solid fa-arrow-right-from-bracket text-[20px] text-white"></i>              
+          </div>
+          <span class="text-white font-medium text-sm whitespace-nowrap scale-100 sidebar-text">Logout</span>
+        </a>
+      </li>
+    </ul>
+    <!-- list menu END -->
+
+  </aside>
+  <!-- sidebar END -->
+
+  <!-- navbar -->
+  <!-- <div class="bottom-nav">
+    <a class="bnav-item bnav-active">
+        <i class="fa-solid fa-chart-column text-[25px] text-white"></i>
+    </a>
+    <a class="bnav-item">
+        <i class="fa-solid fa-user-group text-[25px] text-white"></i>
+    </a>
+    <a class="bnav-item">
+      <div class="w-[20px] text-center">
+        <i class="fa-solid fa-arrow-right-from-bracket text-[25px] text-white"></i>             
+      </div>
+    </a>
+    <label class="bg btn-circle swap swap-rotate duration-[.5s]">
+      <input type="checkbox" id="btn-sub-menu"/>
+      <svg class="swap-off fill-current text-[#CAC4F8] menu-close" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path></svg>
+      <svg class="swap-on fill-current text-[#CAC4F8] menu-close" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 512 512"><polygon points="400 145.49 366.51 112 256 222.51 145.49 112 112 145.49 222.51 256 112 366.51 145.49 400 256 289.49 366.51 400 400 366.51 289.49 256 400 145.49"/></svg>
+    </label>
+    <div class="sub-menu">
+      <a class="sub-menu-item">
+        <div class="w-[25px] text-center">
+        <i class="fa-solid fa-chart-column text-[17px] text-white"></i>  
+        </div>
+      </a>
+      <a class="delay-150 sub-menu-item">
+        <div class="w-[25px] text-center">
+        <i class="fa-solid fa-user-group text-[17px] text-white"></i>
+        </div>
+      </a>
+      <a class="delay-200 sub-menu-item">
+        <div class="w-[25px] text-center">
+        <i class="fa-solid fa-arrow-right-from-bracket text-[17px] text-white"></i>   
+        </div>
+      </a>
+    </div>
+  </div> -->
+  <!-- navbar END -->
+
+  <!-- content here -->
+  <div class="mx-auto flex-1 bg-neutral p-0">
+
+    <!-- header -->
+    <div class="w-full bg-[url('/public/img/bg-hero.png')] h-60 bg-cover bg-center pb-[350px]">
+
+      <div class="w-full flex py-5 px-3 md:px-10 justify-between md:static sticky top-0">
+        <!-- search bar -->
+        <form action="#" class="hidden md:block">
+          <div class="form-control flex-row items-center">
+            <button type="button" class="btn bg-transparent hover:bg-transparent border-0 mr-[-47px] relative z-40">
+              <i class="fa-solid fa-magnifying-glass text-white text-[18px]"></i>
+            </button>
+              <input type="text" placeholder="Cari sesuatu disini .." class="input bg-base-300/20 text-white border-base-300 rounded-full pl-10 h-9 w-[350px]" />
+          </div>
+        </form>
+
+        <!-- menu bar -->
+        <label class="bg btn-circle swap swap-rotate bg-transparent pb-2 md:hidden">
+          <input type="checkbox" id="btn-mobile-menu"/>
+          <svg class="swap-off fill-current text-[#CAC4F8] menu-open" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 512 512"><path d="M64,384H448V341.33H64Zm0-106.67H448V234.67H64ZM64,128v42.67H448V128Z"/></svg>
+          <svg class="swap-on fill-current text-[#CAC4F8] menu-close" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 512 512"><polygon points="400 145.49 366.51 112 256 222.51 145.49 112 112 145.49 222.51 256 112 366.51 145.49 400 256 289.49 366.51 400 400 366.51 289.49 256 400 145.49"/></svg>
+        </label>
+
+        <!-- tool bar -->
+        <div class="flex flex-row gap-5 flex-0">
+
+          <!-- notification -->
+          <div class="items-center flex relative">
+            <span class="bg-base-200 w-3 h-3 rounded-full animate-pulse absolute -right-1 top-2.5"></span> 
+
+              <button type="button" class="cursor-pointer" id="notif-btn">
+                <i class="fa-solid fa-bell w-[25px] text-white"></i>
+              </button>
+              
+              <div class="flex flex-col gap-3 w-80 h-96 bg-white drop-shadow-lg rounded-lg absolute right-[0] top-[50px] flex px-5 py-3  invisible opacity-0 transition-all duration-300 notif-parent z-[999]">
+                <div class="flex justify-between">
+                  <p class="text-slate-600 font-medium">Notification</p>
+                  <button class="btn bg-transparent h-1 hover:bg-transparent text-base-200 border-0 -mt-3">
+                    <i class="fa-solid fa-check-double text-xl text-base-200"></i>
+                  </button>
+                </div>
+
+                <!-- notif content -->
+                <div class="w-full h-full overflow-x-hidden scrollbar-ui">
+                  <a href="" class="notif-content">
+                    <div class="rounded-full h-9 w-10 flex p-2.5 bg-red-500">
+                      <i class="fa-solid fa-triangle-exclamation text-white"></i>
+                    </div>
+
+                    <div class="w-full flex flex-col gap-2">
+                      <p class="text-black text-sm font-medium">
+                        There's an error
+                      </p>
+
+                      <p class="font-medium uppercase text-[10px]">
+                        2 Minutes ago
+                      </p>
+                    </div>
+                  </a>
+                  <a href="" class="notif-content">
+                    <div class="rounded-full h-9 w-10 flex p-2.5 bg-red-500">
+                      <i class="fa-solid fa-triangle-exclamation text-white"></i>
+                    </div>
+
+                    <div class="w-full flex flex-col gap-2">
+                      <p class="text-black text-sm font-medium">
+                        There's an error
+                      </p>
+
+                      <p class="font-medium uppercase text-[10px]">
+                        2 Minutes ago
+                      </p>
+                    </div>
+                  </a>
+                  <a href="" class="notif-content">
+                    <div class="rounded-full h-9 w-10 flex p-2.5 bg-red-500">
+                      <i class="fa-solid fa-triangle-exclamation text-white"></i>
+                    </div>
+
+                    <div class="w-full flex flex-col gap-2">
+                      <p class="text-black text-sm font-medium">
+                        There's an error
+                      </p>
+
+                      <p class="font-medium uppercase text-[10px]">
+                        2 Minutes ago
+                      </p>
+                    </div>
+                  </a>
+                  <a href="" class="notif-content">
+                    <div class="rounded-full h-9 w-10 flex p-2.5 bg-red-500">
+                      <i class="fa-solid fa-triangle-exclamation text-white"></i>
+                    </div>
+
+                    <div class="w-full flex flex-col gap-2">
+                      <p class="text-black text-sm font-medium">
+                        There's an error
+                      </p>
+
+                      <p class="font-medium uppercase text-[10px]">
+                        2 Minutes ago
+                      </p>
+                    </div>
+                  </a>
+                  <a href="" class="notif-content">
+                    <div class="rounded-full h-9 w-10 flex p-2.5 bg-red-500">
+                      <i class="fa-solid fa-triangle-exclamation text-white"></i>
+                    </div>
+
+                    <div class="w-full flex flex-col gap-2">
+                      <p class="text-black text-sm font-medium">
+                        There's an error
+                      </p>
+
+                      <p class="font-medium uppercase text-[10px]">
+                        2 Minutes ago
+                      </p>
+                    </div>
+                  </a>
+                  <a href="" class="notif-content">
+                    <div class="rounded-full h-9 w-10 flex p-2.5 bg-red-500">
+                      <i class="fa-solid fa-triangle-exclamation text-white"></i>
+                    </div>
+
+                    <div class="w-full flex flex-col gap-2">
+                      <p class="text-black text-sm font-medium">
+                        There's an error
+                      </p>
+
+                      <p class="font-medium uppercase text-[10px]">
+                        2 Minutes ago
+                      </p>
+                    </div>
+                  </a>
+                  <a href="" class="notif-content">
+                    <div class="rounded-full h-9 w-10 flex p-2.5 bg-red-500">
+                      <i class="fa-solid fa-triangle-exclamation text-white"></i>
+                    </div>
+
+                    <div class="w-full flex flex-col gap-2">
+                      <p class="text-black text-sm font-medium">
+                        There's an error
+                      </p>
+
+                      <p class="font-medium uppercase text-[10px]">
+                        2 Minutes ago
+                      </p>
+                    </div>
+                  </a>
+                </div>
+
+                <a href="" class="flex justify-center">
+                  <p class="text-base-200 font-medium">View All</p>
+                  <button class="btn bg-transparent h-1 hover:bg-transparent text-base-200 border-0 -mt-3">
+                    <i class="fa-solid fa-magnifying-glass w-3 h-3 text-base-200"></i>
+                  </button>
+                </a>
+              </div>
+          </div>
+
+          <!-- calendar -->
+          <!-- <div class="flex items-center">
+            <input type="date" id="date-picker" class="calendar-icon bg-transparent text-white border-0 ring-0 -mr-[18px] relative z-3 opacity-0">
+            <i class="fa-solid fa-calendar-days text-white"></i>
+          </div> -->
+
+          <!-- prfile -->
+          <div class="flex justify-start flex-row items-center gap-2">
+            <div class="flex -space-x-2 overflow-hidden h-9 w-9 drop-shadow-lg cursor-pointer" id="profile">
+                <img class="inline-block object-fit rounded-full" src="./public/img/avatar-profile.jpg" alt="Yae Miko"/>
+            </div>
+            <span class="font-medium text-white">Zulhan</span>
+            <ul tabindex="0" class="dropdown-content menu p-2 drop-shadow-lg bg-base-100 rounded-box text-white rounded-lg w-52 absolute transition-all duration-300 opacity-0 right-5 top-0 invisible flex flex-col justify-start z-[999]" id="profile-menu">
+              <li>
+                <a> 
+                  <div class="rounded-full p-2">
+                    <i class="fa-solid fa-user text-white w-3"></i>
+                  </div>
+                  Edit Profile
+                </a>
+              </li>
+              <li>
+                <a> 
+                  <div class="rounded-full p-2">
+                    <i class="fa-solid fa-gear text-white w-3"></i>                  
+                  </div>
+                  Pengaturan
+                </a>
+              </li>
+              <li>
+                <a> 
+                  <div class="rounded-full p-2">
+                    <i class="fa-solid fa-arrow-right-from-bracket w-3 text-white"></i>  
+                  </div>
+                  Logout
+                </a>
+              </li>
+            </ul>
+          </div> 
+
+        </div>
+      </div>
+
+      <!-- breadcrumb -->
+      <div class="w-full flex justify-between px-3 md:px-10">
+        <div class="text-sm breadcrumbs">
+          <ul>
+            <li class="text-[#B6B5B5]">
+              <a href="./index.html">
+                Dashboard
+              </a>
+            </li> 
+            <li class="text-white">
+              Overview
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- greeting text, button add & update -->
+      <div class="w-full grid grid-cols-2 px-3 md:px-10">
+        <div class="flex flex-col gap-2 mt-2 md:col-span-1 col-span-2">
+          <h1 class="text-white font-bold text-2xl">Welcome back Zulhan !</h1>
+          <p class="text-white text-md normal-case">Semakin kau tau, semakin kamu menyadari bahwa tidak terlalu banyak yang kau ketahui</p>
+        </div>
+        <div class="md:flex flex-row gap-4 mt-2 col-span-1 items-end justify-end hidden">
+          <a href="#" class="btn btn-sm bg-base-400/40 border-base-400 hover:bg-base-450 hover:border-base-450 text-white normal-case flex gap-2">
+            <i class="fa-solid fa-pen text-white w-3"></i>
+            <span>
+              Update anggota
+            </span>
+          </a>
+          <a href="#" class="btn btn-sm bg-base-400 border-base-400 hover:bg-base-450 hover:border-base-450 text-white normal-case flex gap-2">
+            <i class="fa-solid fa-plus text-white w-3"></i>
+            <span>
+              Tambah anggota
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <!-- header end -->
+
+    <!-- statistic card -->
+    <div class="grid grid-cols-4 lg:grid-cols-3 gap-3 px-3 md:px-10 place-items-center translate-y-[-80px]">
+      
+      <div class="flex flex-col justify-center bg-success-card col-span-2 md:col-span-2 lg:col-span-1 p-4 rounded-xl relative h-[200px] w-full">
+        <span class="text-white font-medium absolute top-2 text-md">Anggota</span>
+        <div class="flex justify-between items-center">
+          <h1 class="text-white font-bold text-3xl lg:text-[60px]">456</h1>
+          <i class="fa-solid fa-user-group text-[#297257] text-[59px] hidden lg:visible"></i>
+        </div>
+        <div class="flex flex-col justify-between absolute left-0 right-0 bottom-0 rounded-b-xl bg-[#297257]">
+          <a href="#" class=" text-white normal-case flex items-center px-4 py-2 flex gap-2">
+            <i class="fa-solid fa-plus text-white w-3"></i>
+            <span>
+              Lebih lanjut
+            </span>
+          </a>
+        </div>
+      </div>
+
+      <div class="flex flex-col justify-center bg-info-card col-span-2 md:col-span-2 lg:col-span-1 p-4 rounded-xl relative h-[200px] w-full">
+        <span class="text-white font-medium absolute top-2 text-md">Admin</span>
+        <div class="flex justify-between items-center">
+          <h1 class="text-white font-bold text-3xl lg:text-[60px]">456</h1>
+          <i class="fa-solid fa-user text-[#1E7671] text-[59px] hidden lg:visible"></i>
+        </div>
+        <div class="flex flex-col justify-between absolute left-0 right-0 bottom-0 rounded-b-xl bg-[#1E7671]">
+          <a href="#" class=" text-white normal-case flex items-center px-4 py-2 flex gap-2">
+            <i class="fa-solid fa-plus text-white w-3"></i>
+            <span>
+              Lebih lanjut
+            </span>
+          </a>
+        </div>
+      </div>
+
+      <div class="flex flex-col justify-center bg-danger-card col-span-2 md:col-span-2 lg:col-span-1 p-4 rounded-xl relative h-[200px] w-full">
+        <span class="text-white font-medium absolute top-2 text-md">Super admin</span>
+        <div class="flex justify-between items-center">
+          <h1 class="text-white font-bold text-3xl lg:text-[60px]">4</h1>
+          <i class="fa-solid fa-user-gear text-[#933232] text-[59px] hidden lg:visible"></i>
+        </div>
+        <div class="flex flex-col justify-between absolute left-0 right-0 bottom-0 rounded-b-xl bg-[#933232]">
+          <a href="#" class=" text-white normal-case flex items-center px-4 py-2 flex gap-2">
+            <i class="fa-solid fa-plus text-white w-3"></i>
+            <span>
+              Lebih lanjut
+            </span>
+          </a>
+        </div>
+      </div>
+      
+    </div>
+    <!-- statistic card end -->
+
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div class="md:px-10 px-3 pb-28 max-w-full block">
+      <div class="relative flex flex-col min-w-0 break-words w-full drop-shadow-xl rounded bg-white">
+        <div class="rounded-t mb-0 px-4 py-3">
+          <div class="flex flex-wrap items-center text-[#2E3138]">
+            <div class="relative w-full max-w-full flex-grow flex-1">
+              <h6 class="uppercase mb-1 text-xs font-semibold">
+                Overview
+              </h6>
+              <h2 class="text-xl font-semibold">
+                Statistik jumlah anggota
+              </h2>
+            </div>
+          </div>
+        </div>
+        <div class="flex-auto">
+          <!-- Chart -->
+          <div class="relative h-[350px] p-4 rounded-b-md">
+            <canvas id="line-chart"></canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+  </div>
+  <!-- content end -->
+</div>
+
+
+const sidebar = document.getElementById('sidebar');
+const sidebarText = [...document.querySelectorAll('.sidebar-text')];
+const btnMenu = document.getElementById('btn-menu');
+const menuClose = document.querySelector('.menu-open');
+const menuOpen = document.querySelector('.menu-close');
+const btnDots = document.getElementById('btn-sub-menu');
+const subMenu = document.querySelectorAll('.sub-menu-item');
+const profile = document.getElementById('profile');
+const profileMenu = document.getElementById('profile-menu');
+const notifParent = document.querySelector('.notif-parent');
+const notifBtn = document.getElementById('notif-btn');
+const btnMobileMenu = document.getElementById('btn-mobile-menu');
+
+// btnMobileMenu.addEventListener('change', () => {
+//   sidebar.classList.toggle('hidden');
+//   sidebar.classList.toggle('w-0');
+//   sidebar.classList.toggle('w-[300px]');
+//   sidebar.classList.remove('sticky');
+//   sidebar.classList.toggle('fixed');
+// })
+
+sidebarText.forEach(st => st.classList.add('transition-all', 'duration-300'));
+
+// profile.addEventListener('click', () => {
+//   profileMenu.classList.toggle('invisible');
+//   profileMenu.classList.toggle('visible');
+//   profileMenu.classList.toggle('top-[70px]');
+//   profileMenu.classList.toggle('opacity-0');
+//   profileMenu.classList.toggle('opacity-100');
+// })
+
+// notifBtn.addEventListener('click', () => {
+//   notifParent.classList.toggle('invisible');
+//   notifParent.classList.toggle('visible');
+//   notifParent.classList.toggle('opacity-0');
+//   notifParent.classList.toggle('opacity-100');
+// })
+
+const toggleSidebar = () => {
+  sidebar.classList.toggle('w-[250px]');
+  sidebar.classList.toggle('w-[100px]');
+  sidebarText.forEach(st => {
+    st.classList.toggle('scale-0');
+    st.classList.toggle('scale-100');
+  });
+  if (btnMenu.checked) {
+    document.getElementById('line-chart').style.width -= sidebar.offsetWidth + 'px'
+  } else {
+    document.getElementById('line-chart').style.width = sidebar.offsetWidth + 'px'
+  }
+}
+
+
+btnMenu.addEventListener('change', toggleSidebar);
+
+if (btnDots) {
+  btnDots.addEventListener('change', () => {
+    subMenu.forEach(item => {
+      item.classList.toggle('opacity-0', !btnDots.checked);
+      item.classList.toggle('opacity-100', btnDots.checked);
+      item.classList.toggle('translate-y-[999px]', !btnDots.checked);
+      item.classList.toggle('translate-y-0', btnDots.checked);
+    });
+  });
+}

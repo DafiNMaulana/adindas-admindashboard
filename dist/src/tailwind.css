@@ -2,9 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  .drawer-toggle ~ .drawer-content {
+    grid-column-start: 2 !important;
+  }
+}
+
 @layer components {
   .sidebar-content {
-    @apply w-full flex flex-row flex-nowrap gap-4 py-4 hover:bg-accent rounded-2xl transition-all duration-300 overflow-x-hidden px-6;
+    @apply w-full flex flex-row flex-nowrap gap-4 py-4 hover:bg-accent rounded-2xl transition-all duration-300 overflow-x-hidden px-5;
+  }
+
+  .sidebar-text {
+    @apply duration-300;
   }
 
   .bottom-nav {
@@ -40,7 +50,7 @@
     background-color: #edf2f7;
   }
   .notif-content {
-    @apply flex flex-row w-full gap-3 border-b border-slate-100 py-1 hover:bg-slate-100 transition-all rounded-lg px-1;
+    @apply flex flex-row w-full gap-3 border-b border-slate-100 hover:bg-slate-100 transition-all rounded-lg p-3 pt-5;
   }
 }
 
